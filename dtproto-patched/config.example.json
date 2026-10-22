@@ -1,0 +1,15 @@
+{
+  "server": {
+    "virtual_subnet_cidr": "10.10.0.0/16",
+    "stats_file": "/etc/proto-server/stats.json",
+    "auth": { "system": true },
+    "tun": { "name": "tun0", "buffer_size": 65536 }
+  },
+  "proxy": {
+    "enabled": true,
+    "listen": [
+      { "host": "0.0.0.0", "port": 443, "ssl": true },
+      { "host": "0.0.0.0", "port": 80, "ssl": false }
+    ]
+  }
+}
